@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <meta charset="utf-8">
+    <title>Chat</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark bg-dark">
+      <div id="tatan">
+        <a href="https://www.jonathansimanca.com">Go to: Jonathan Simanca</a>
+      </div>
+      <a class="navbar-brand mx-auto" href="/">Let's Chat</a>
+    </nav>
+    <div id="nickWrap" class="card col-md-4 mx-auto mt-5">
+      <div class="card-header">
+        <h3>Enter your Username</h3>
+      </div>
+      <p id="nickError"></p>
+      <div class="card-body">
+        <form id="nickForm">
+          <input id="nickname" type="text" class="form-control"/>
+          <input type="submit" class="btn btn-warning btn-block mt-2"/>
+        </form>
+      </div>
+    </div>
+
+    <div class="container" id="contentWrap">
+      <div class="row mt-5">
+
+        <div class="col-md-6 offset-md-1">
+          <!-- CHAT CONTAINER -->
+          <div class="card">
+            <!-- CARD HEADER-->
+            <div class="card-header">
+              <h4>Room</h3>
+              <p>For whisper type "/w username text"</p>
+            </div>
+
+            <!-- CARD BODY-->
+            <div id="chat" class="card-body"></div>
+
+            <!-- CARD FOOTER -->
+            <form id="message-form" class="card-footer">
+              <div class="input-group">
+                <input type="text" id="message" class="form-control"/>
+                <div class="input-group-append">
+                  <button class="btn btn-warning">
+                    <i class="fas fa-location-arrow"></i> Send
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- USERS SECTION-->
+        <div class="card contusers text-white bg-primary mb-3">
+          <div class="card-header">
+            <h3 class="card-title">Users</h3>
+          </div>
+          <div class="card-body">
+            <div id="usernames"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <footer class="container-fluid text-center bg-lightgray">
+          <div id="license" style="margin-top:25px;">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+              <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+            </a>
+            <br/>This work is licensed under a
+            <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+              Creative Commons Attribution-NonCommercial 4.0 International License.
+            </a>
+            <p>Bogotá-Colombia © 2021
+              <br><span>Maked By: Jonathan Simanca</span></p>
+          </div>
+      </footer>
+    </div>  
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="/js/main.js" charset="utf-8"></script>
+  </body>
+</html>
